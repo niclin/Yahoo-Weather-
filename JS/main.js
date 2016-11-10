@@ -1,4 +1,5 @@
 $(function() {
+	$("#loading").hide(1000);
     var url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22taiwan%2C%20tnn%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
     var getWeather = $.getJSON(url, function(date) {
         console.log(date);
@@ -77,4 +78,5 @@ $(function() {
             $(".forecast").append("<div class='wi " + weather(date.query.results.channel.item.forecast[i].text)[1] + " card' ><p>" + date.query.results.channel.item.forecast[i].date + ", " + day+ "</p>" + "<p>" + weather(date.query.results.channel.item.forecast[i].text)[0] + ", " + low + "~" + high+"</p>");
         }
     });
+
 })

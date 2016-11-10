@@ -22,3 +22,6 @@
 .card:hover {
     box-shadow: 14px 14px 20px gray;
 }
+#loading {
+	text-align: center;
+}
