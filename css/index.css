@@ -1,4 +1,24 @@
-.container {
-	text-align: center;
+.main {
+    text-align: center;
 }
 
+.card {
+    width: 250px;
+    height: 200px;
+    font-size: 1.4rem;
+    margin:0 5px;
+    padding:20px 0px 0px 0px;
+    box-shadow: 1px 1px 5px gray;
+    transition: box-shadow 1s;
+    -moz-transition: box-shadow 1s;
+    /* Firefox 4 */
+    -webkit-transition: box-shadow 1s;
+    /* Safari 和 Chrome */
+    -o-transition: box-shadow 1s;
+    /* Opera */
+    
+}
+
+.card:hover {
+    box-shadow: 14px 14px 20px gray;
+}
